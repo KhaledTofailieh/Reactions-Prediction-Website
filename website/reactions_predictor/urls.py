@@ -1,6 +1,14 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [path('/login', views.login),
-               path('/input', views.get_input_form),
-               path('/reactions', views.get_reactions_prediction)]
+urlpatterns = [
+    path('', views.start),
+
+    path('login', views.login, name='login'),
+    path('register', views.register),
+    path('home', views.home),
+    path('results', views.results),
+    path('page_register', views.page_register),
+    path('test_board', views.test_board),
+    path('test_results', views.test_results),
+    ]
